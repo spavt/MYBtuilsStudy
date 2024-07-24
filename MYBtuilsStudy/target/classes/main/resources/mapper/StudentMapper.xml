@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jiazhong.Student.StudentMapper">
+    <select id="findAll1" resultType="com.jiazhong.pojo.Student">
+        select * from students
+    </select>
+    <select id="findById1">
+        select * from students where sno=#{sno}
+    </select>
+
+    <update id="updatedata1">
+        update students set sname=#{sname},ssex=#{ssex},sclass=#{sclass} WHERE sno=#{sno}
+    </update>
+
+    <insert id="insertdata1">
+    insert into students values (#{sno},#{sname},#{ssex},#{sclass})
+    </insert>
+
+    <delete id="deletedata1">
+        delete from students where sno=#{sno};
+    </delete>
+
+
+</mapper>
+
+
